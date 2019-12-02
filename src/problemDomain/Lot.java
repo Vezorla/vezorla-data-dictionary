@@ -1,4 +1,7 @@
+package problemDomain;
+import java.util.Currency;
 import java.util.Date;
+import java.util.List;
 
 /**
  * The Lot class creates a Lot number to be associated with a shipment of purchase.
@@ -18,12 +21,32 @@ import java.util.Date;
  *
  */
 public class Lot {
-
+	
 	/**
 	 * lotNum to uniquely identify the lot.
 	 */
 	private String lotNum;
-	
+	/**
+	 * product is the product that 
+	 * the lot is for.  
+	 */
+	private Product product;
+	/**
+	 * purchaseOrder is the PurchaseOrder
+	 * the Lot belong to. 
+	 */
+	private PurchaseOrder purchaseOrder;
+	/**
+	 * warehouse is the Warehouse that
+	 * the lot is stored at. 
+	 */
+	private Warehouse warehouse;
+	/**
+	 * lineItems is a list of LineItem
+	 * that the lot is associated with. 
+	 * This is for tracability purposes. 
+	 */
+	private List<LineItem> lineItems;
 	/**
 	 * quantity is the current quantity
 	 * on hand for the lot. 
@@ -34,13 +57,8 @@ public class Lot {
 	 * cost is the how much the 
 	 * product costs Vezorla. 
 	 */
-	private float cost;
+	private Currency cost;
 	
-	/**
-	 * price is how much Vezorla 
-	 * is selling the product. 
-	 */
-	private float price;
 	
 	/**
 	 * bestBefore is the Date in 
@@ -48,10 +66,4 @@ public class Lot {
 	 * to be consumed.  
 	 */
 	private Date bestBefore;
-	
-	/**
-	 * product is the product that 
-	 * the lot is for.  
-	 */
-	private Product product;
 }

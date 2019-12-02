@@ -1,3 +1,6 @@
+package problemDomain;
+import java.util.Currency;
+import java.util.List;
 
 /**
  * The Product class contains the data for a Product within the system.
@@ -17,6 +20,13 @@
  *
  */
 public class Product {
+	
+	/**
+	 * discounts is a list of
+	 * the current Discounts 
+	 * associated with the product. 
+	 */
+	private List<Discount> discounts;
 	/**
 	 * prodID to uniquely identify 
 	 * the product. 
@@ -36,5 +46,25 @@ public class Product {
 	 * shows the product.  
 	 */
 	private String image;
+	/**
+	 * active is a boolean indicating
+	 * if the product is an active product
+	 * at Vezorla. If the product is 
+	 * not active (not being bought or 
+	 * sold) this value will be false. 
+	 */
+	private boolean active;
+	/**
+	 * threshold is an int representing
+	 * the min number of product that 
+	 * should be in inventory. 
+	 */
+	private int threshold;
+	/**
+	 * price is a Currency that
+	 * holds the the price of
+	 * the product.
+	 */
+	private Currency price;
 
 }

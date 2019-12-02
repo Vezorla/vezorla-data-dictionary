@@ -1,19 +1,22 @@
+package problemDomain;
 import java.util.Date;
 import java.util.List;
 
 /**
- * The PurchaseOrder class contains the order information of a 
- * Cart of Products. As such, it only directly associates itself
- * with the Lot class as each order must contain a Lot object.
+ * The PurchaseOrder class contains the information of purchase 
+ * orders for Vezorla. Purchase orders are the products being
+ * ordered by the supplier. 
+ * As such, it only directly associates itself
+ * with the Lot class as each purchase order must contain a Lot object.
  * 
  * The PurchaseOrder class has the following responsibilities:
  * - lotNum: String
  * - quantity: int
- * - cost: float
- * - price: float
+ * - cost: Currency
+ * - price: Currency
  * 
- * Cost and Price are different as the actual cost of within the Lot may
- * be different than the original price of the Lot.
+ * The cost of the product is how much the product cost Vezorla. 
+ * The price of the product is how much vezorla is selling the product for. 
  * 
  * @author Vezorla
  *
@@ -22,7 +25,7 @@ public class PurchaseOrder {
 	
 	/**
 	 * poNum uniquely identifies the
-	 * purchase order. 
+	 * purchase order.
 	 */
 	private int poNum;
 	/**
@@ -45,7 +48,7 @@ public class PurchaseOrder {
 	private boolean received;
 	/**
 	 * lots is a list of lots on the 
-	 * purchase.  Essentially, this is 
+	 * purchase order. Essentially, this is 
 	 * what product, quantity, and etc. 
 	 * is on the purchase order. 
 	 */
