@@ -1,7 +1,6 @@
 /**
  * ProductDB is responsible for the handling and
- * manipulation of Products within the Product
- * database table.
+ * manipulation of Products within the database.
  *
  * @author Vezorla
  */
@@ -29,7 +28,7 @@ public class ProductDB {
      * Adds a Product object to the database.
      *
      * @param product Product to be added.
-     * @return true if product was added, false otherwise.
+     * @return boolean True if product was added, false otherwise.
      */
     public boolean addProduct(Product product);
 
@@ -39,7 +38,7 @@ public class ProductDB {
      * the database.
      *
      * @param product Product to be updated.
-     * @return true if product was updated, false otherwise.
+     * @return boolean True if product was updated, false otherwise.
      */
     public boolean updateProduct(Product product);
 
