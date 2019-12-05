@@ -17,6 +17,12 @@ package problemDomain;
 public class Warehouse {
 	
 	/**
+	 * warehouseNum to uniquely
+	 * identify the warehouse.
+	 */
+	private String warehouseNum;
+	
+	/**
 	 * address is the address of the 
 	 * warehouse.  
 	 */
