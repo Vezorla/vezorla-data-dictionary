@@ -8,10 +8,12 @@
  */
 package services;
 
+import problemDomain.Account;
+
 public class AccountServices {
 
     /**
-     * Gets the account that is assossiated with the
+     * Gets the account that is associated with the
      * email parameter.
      *
      * @param email a String for the email.
@@ -35,9 +37,21 @@ public class AccountServices {
     /**
      * Creates an account in the system.
      *
+     * @param lastName for the account holder's last name.
+     * @param firstName for the account holder's first name.
+     * @param phonNum for the account holder's phone number.
+     * @param accountType for the account type. (Business or individual).
+     * @param address for the account holder's address.
+     * @param city for the account holders city. 
+     * @param country for the account holder's country.
+     * @param postalCode for the account holder's postalCode. 
+     * @param passsword for the account holder's password.
+     * @param email for the account holder's email.
+     * @param userCreated is the account was user or system created. 
+     * @param accountAdmin if the account is an admin account. 
      * @return boolean true if created, false otherwise.
      */
-    public boolean createAccount() {
+    public boolean createAccount(String lastName, String firstName, String phonNum, char accountType, String address, String city, String country, String postalCode, String passsword, String email, boolean userCreated, boolean accountAdmin) {
         return false;
     }
 

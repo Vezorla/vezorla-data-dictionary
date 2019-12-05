@@ -29,7 +29,7 @@ import java.util.List;
  * @author Vezorla
  *
  */
-class Account {
+public class Account {
 	
 	/**
 	 * cart is a Cart object associated 

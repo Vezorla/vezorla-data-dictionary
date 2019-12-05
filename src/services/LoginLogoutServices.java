@@ -12,9 +12,12 @@ public class LoginLogoutServices {
 	
 	/**
 	 * Method to assist with 
-	 * logging in. 
+	 * logging in.
+	 *  
+	 * @param email String for the user's email.
+	 * @param password String for the user's password.
 	 */
-	public void login() {
+	public void login(String email, String password) {
 		
 	}
 	
