@@ -1,5 +1,5 @@
 /**
- * AccountDB is responsible for the handling and
+  * AccountDB is responsible for the handling and
  * manipulation of Accounts within the database.
  * It is also responsible for verifying the login
  * as well as checking if an Account is admin.
@@ -43,19 +43,21 @@ public class AccountDB {
     /**
      * Gets all the Invoice objects from the database.
      *
+     * @param account Account to get the invoices
      * @return List<Invoice> Contains all the Invoice
      * objects from the database.
      */
-    public List<Invoice> getInvoices();
+    public List<Invoice> getInvoices(Account account);
 
     /**
      * Gets the Account's Cart object from the database.
      *
+     * @param account Account to get the cart
      * @return Cart The Account's Cart from the database.
      * Note: This method must not return null as all Account
      * obejcts must have at least one Cart.
      */
-    public Cart getCart();
+    public Cart getCart(Account account);
 
     /**
      * Verifies the Account Login credentials.
@@ -69,9 +71,26 @@ public class AccountDB {
     /**
      * Checks to see if the Account is of type admin.
      *
+     * @param account Account to be checked.
      * @return boolean True if Account is admin,
      * false otherwise.
      */
-    public boolean isAdmin();
+    public boolean isAdmin(Account account);
 
+    /**
+     * Checks to see if the email is existed.
+     *
+     * @param email String to be checked.
+     * @return boolean True if Account is existed,
+     * false otherwise.
+     */
+    public boolean emailExists(String email);
+    
+    /**
+     * Gets all account that are business type
+	 *
+     * @return List<Account> Contains all the Account
+     * objects from the database.
+     */
+    public List<Account> getAllBusinesses();
 }

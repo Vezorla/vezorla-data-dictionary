@@ -55,6 +55,14 @@ public class LotDB {
     public List<Lot> getAllLots(String filter);
 
     /**
+     * Gets all the Lots from the database given warehouse.
+     *
+     * @param warehouse Warehouse parameter to get Lot
+     * @return List<Lot> Contains all the Lots from the database.
+     */
+    public List<Lot> getAllLots(Warehouse warehouse);
+    
+    /**
      * Gets all the Lots from the database given a
      * specific Product ID.
      *
@@ -64,6 +72,14 @@ public class LotDB {
      */
     public List<Lot> getAllLots(int prodId);
 
+    /**
+     * Get the quantity of the product
+     * 
+     * @param prodID int Search parameter to get quantity
+     * @return int Quantity of the product
+     * */
+    public int getProductQuantity(int prodID);
+    
     /**
      * Gets a Warehouse given the Lot object in
      * which it contains.
