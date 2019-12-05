@@ -20,13 +20,23 @@ public class Warehouse {
 	 * warehouseNum to uniquely
 	 * identify the warehouse.
 	 */
-	private String warehouseNum;
+	private int warehouseNum;
 	
 	/**
 	 * address is the address of the 
 	 * warehouse.  
 	 */
 	private String address;
+	/**
+	 * province is the province
+	 * location of the warehouse.
+	 */
+	private String province;
+	/**
+	 * City is the city
+	 * location of the warehouse. 
+	 */
+	private String city;
 	/**
 	 * postal code is the 
 	 * postal code of the warehouse. 

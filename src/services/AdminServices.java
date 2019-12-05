@@ -14,6 +14,7 @@ import java.util.Currency;
 import java.util.Date;
 import java.util.List;
 
+import problemDomain.Discount;
 import problemDomain.Email;
 import problemDomain.Invoice;
 import problemDomain.Product;
@@ -173,7 +174,6 @@ public class AdminServices {
 		boolean success = false;
 		return success;
 	}
-	
 	/**
 	 * Method to obtain values from the database to display
 	 * as a report.
@@ -319,6 +319,33 @@ public class AdminServices {
 	public Email createBusinessOrderEmailAccept(Invoice invoice) {
 		Email email = null;
 		return email;
+	}
+	
+	/**
+	 * Method to return all the discounts currently
+	 * in the database. 
+	 * 
+	 * @return List of all the discounts. 
+	 */
+	public List<Discount> getAllDiscounts(){
+		List<Discount> discounts = null;
+		return discounts;
+	}
+	
+	/**
+	 * Method to add a discount to the database. 
+	 * @param type String for the type of discount. 
+	 * @param percent float for the percentage of the discount.
+	 * @param highlight boolean if the discount is to be used on front-end. 
+	 * @param description String for a description of the discount. 
+	 * @param startDate Date for the start date of the discount. 
+	 * @param endDate Date for the end date for the discount.
+	 * @param minOrderValue Currency for the minimum amount a customer/client must have to apply discount. 
+	 * @return a boolean if the discount was successfully added to the database. 
+	 */
+	public boolean addDiscount(String type, float percent, boolean highlight, String description, Date startDate, Date endDate, Currency minOrderValue) {
+		boolean success = false;
+		return success;
 	}
 
 }
