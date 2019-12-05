@@ -24,8 +24,18 @@ public class InvoiceDB {
 	 * @param invoiceNum Invoice number for method to perform search with.
 	 * @return Invoice The invoice that matches the Invoice Number
 	 */
-	public Invoice searchInvoice(int invoiceNum) {};
+	public Invoice searchInvoice(int invoiceNum) {}
 	
+	
+	/**
+	 * Searches Database for invoice by  start date and end date. Returns Invoice Object that matches the requirements.
+	 * 
+	 * 
+	 * @param startDate Date start date for method to perform search with.
+	 * @param endDate Date end date for method to perform search with in.
+	 * @return Invoice The invoice that matches the requirements.
+	 */
+	public Invoice searchInvoice(Date startDate, Date endDate) {}
 	
 	/**
 	 * Method takes an Invoice Object and creates an entry in the Vezorla Database.
@@ -34,7 +44,7 @@ public class InvoiceDB {
 	 * @param invoice Invoice Object used to create Database Entry
 	 * @return boolean Indicates operation success. True - Succeeded. False - Failed.
 	 */
-	public boolean addInvoice(Invoice invoice) {};
+	public boolean addInvoice(Invoice invoice) {}
 	
 	
 	/**
@@ -47,7 +57,7 @@ public class InvoiceDB {
 	 * @param message Optional message to Denote the reason for state change of invoice.
 	 * @return Indicates operation success. True - Succeeded. False - Failed.
 	 */
-	public boolean updateInvoice(int invoiceNum, String state, String message) {};
+	public boolean updateInvoice(int invoiceNum, String state, String message) {}
 	
 	
 	/**
@@ -56,7 +66,15 @@ public class InvoiceDB {
 	 * 
 	 * @return List<Invoice> List of all Invoice Objects stored within Vezorla Database.
 	 */
-	public List<Invoice> getInvoices() {};
+	public List<Invoice> getInvoices() {}
+	
+	/**
+	 * Creates a List of all Invoice Objects stored in Vezorla Database that match the given state. Returns that list for presentation.
+	 * 
+	 * 
+	 * @return List<Invoice> List of all Invoice Objects stored within Vezorla Database.
+	 */
+	public List<Invoice> getInvoices(boolean state) {}
 	
 	
 	/**
@@ -65,7 +83,7 @@ public class InvoiceDB {
 	 * @param invoiceNum The Invoice Number corresponding to the Invoice to retrieve state from.
 	 * @return The state of the Invoice. True - Invoice currently open. False - Invoice is closed. 
 	 */
-	public boolean getState(int invoiceNum) {};
+	public boolean getState(int invoiceNum) {}
 	
 	
 	/**
@@ -78,10 +96,10 @@ public class InvoiceDB {
 	 * 
 	 * @param start The Start Date of date range.
 	 * @param end  The End Date of date range.
-	 * @param filters Comma delimited string of all user applied filters.
+	 * @param filter Comma delimited string of all user applied filters.
 	 * @return List<InvoiceReport> A list of InvoiceReport Objects for each Product applicable to the filters and date range.
 	 */
-	public List<InvoiceReport> getInvoiceReports(Date start, Date end, String filters) {};
+	public List<InvoiceReport> getInvoiceReports(Date start, Date end, String filter) {}
 	
 	
 	/**
@@ -94,8 +112,8 @@ public class InvoiceDB {
 	 * 
 	 * @param start The Start Date of date range.
 	 * @param end  The End Date of date range.
-	 * @param filters Comma delimited string of all user applied filters.
+	 * @param filter Comma delimited string of all user applied filters.
 	 * @return List<Invoice> A list of Invoice Objects applicable to the filters and date range.
 	 */
-	public List<Invoice> getInvoices(Date start, Date end, String filters) {};
+	public List<Invoice> getInvoices(Date start, Date end, String filter) {}
 }

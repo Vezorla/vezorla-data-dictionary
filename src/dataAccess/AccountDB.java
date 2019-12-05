@@ -17,7 +17,7 @@ public class AccountDB {
      * @return Account The Account object that matches
      * the email address, null otherwise.
      */
-    public Account getAccount(String email);
+    public Account getAccount(String email) {}
 
     /**
      * Adds an Account object to the database.
@@ -27,7 +27,7 @@ public class AccountDB {
      * @return boolean True if Account was added,
      * false otherwise.
      */
-    public boolean addAccount(Account account);
+    public boolean addAccount(Account account) {}
 
     /**
      * Updates an Account within the database given
@@ -38,7 +38,7 @@ public class AccountDB {
      * @return boolean True if Account was updated,
      * false otherwise.
      */
-    public boolean updateAccount(Account account);
+    public boolean updateAccount(Account account) {}
 
     /**
      * Gets all the Invoice objects from the database.
@@ -47,7 +47,7 @@ public class AccountDB {
      * @return List<Invoice> Contains all the Invoice
      * objects from the database.
      */
-    public List<Invoice> getInvoices(Account account);
+    public List<Invoice> getInvoices(Account account) {}
 
     /**
      * Gets the Account's Cart object from the database.
@@ -57,7 +57,7 @@ public class AccountDB {
      * Note: This method must not return null as all Account
      * obejcts must have at least one Cart.
      */
-    public Cart getCart(Account account);
+    public Cart getCart(Account account) {}
 
     /**
      * Verifies the Account Login credentials.
@@ -66,7 +66,7 @@ public class AccountDB {
      * @return Account Account object that is verified,
      * null otherwise.
      */
-    public Account verifyLogin(Account account);
+    public Account verifyLogin(Account account) {}
 
     /**
      * Checks to see if the Account is of type admin.
@@ -75,7 +75,7 @@ public class AccountDB {
      * @return boolean True if Account is admin,
      * false otherwise.
      */
-    public boolean isAdmin(Account account);
+    public boolean isAdmin(Account account) {}
 
     /**
      * Checks to see if the email is existed.
@@ -84,7 +84,7 @@ public class AccountDB {
      * @return boolean True if Account is existed,
      * false otherwise.
      */
-    public boolean emailExists(String email);
+    public boolean emailExists(String email) {}
     
     /**
      * Gets all account that are business type
@@ -92,5 +92,5 @@ public class AccountDB {
      * @return List<Account> Contains all the Account
      * objects from the database.
      */
-    public List<Account> getAllBusinesses();
+    public List<Account> getAllBusinesses() {}
 }

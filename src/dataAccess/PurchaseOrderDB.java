@@ -21,7 +21,7 @@ public class PurchaseOrderDB {
 	 * @param keyword The keyword input by user. Used to match a Purchase Order within Database.
 	 * @return PurchaseOrder The Purchase Order that matched the search keyword.
 	 */
-	public PurchaseOrder searchPO(String keyword) {};
+	public PurchaseOrder searchPO(String keyword) {}
 	
 	
 	/**
@@ -29,40 +29,43 @@ public class PurchaseOrderDB {
 	 * Adds a PurchaseOrder Object to the Database.
 	 * 
 	 * @param po Purchase Order to be added into the database.
-	 */
-	public void addPO(PurchaseOrder po) {};
+	 * @return boolean True if Purchase Order is added,
+     * false otherwise.
+     */
+	public boolean addPO(PurchaseOrder po) {}
 	
 	
 	/**
 	 * Updates a PurchaseOrder within Database given a PurchaseOrder object.
 	 * 
 	 * @param po PurchaseOrder object that overwrites existing entry using PurchaseOrder number.
+	 * @return boolean True if Purchase Order is updated,
+     * false otherwise.
 	 */
-	public void update(PurchaseOrder po) {};
+	public boolean update(PurchaseOrder po) {}
 	
 	
 	/**
 	 * Returns a List of Product Objects arranged by Lot Number.
 	 * 
-	 * 
 	 * @return List<Product> List of Product Objects.
 	 */
-	public List<Product> getLots(){};
+	public List<Product> getLots(){}
 	
 	
 	/**
 	 * Returns a List of all PurchaseOrder objects stored in database.
 	 * 
-	 * 
 	 * @return List<PurchaseOrder> A List of all PurchaseOrder objects stored within the database.
 	 */
-	public List<PurchaseOrder> getAllPO() {};
+	public List<PurchaseOrder> getAllPO() {}
 	
 	
 	/**
 	 * Responsible for changing the received status of a PurchaseOrder object from False to True.
 	 * 
+	 * @param po PurchaseOrder object that need to be changed received state.
 	 * @return boolean Indicator of operation success. True - Operation Succeed. False - Operation Failed.
 	 */
-	public boolean toggleReceived() {};
+	public boolean toggleReceived(PurchaseOrder po) {}
 }
