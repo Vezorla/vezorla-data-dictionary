@@ -8,7 +8,7 @@ public class DiscountDB {
 	 * @return List<Discount> Contains all all the Discount 
 	 * Objects from the database.
      */
-	public List<Discount> getAllDiscount();
+	public List<Discount> getAllDiscount() {}
 	
 	
 	/**
@@ -18,7 +18,7 @@ public class DiscountDB {
 	 * @return List<Discount> Contains all all the Discount 
 	 * Objects from the database.
 	 * */
-	public List<Discount> getUserDiscountsNotUsed(Account account);
+	public List<Discount> getUserDiscountsNotUsed(Account account) {}
 	
     /**
      * Add a Discount Object to the database.
@@ -28,7 +28,7 @@ public class DiscountDB {
      * @return boolean True if discount is added,
      * false otherwise.
      */
-	public boolean addDiscount(Discount discount);
+	public boolean addDiscount(Discount discount) {}
 	
 	/**
      * Updates the discount within the database.
@@ -39,5 +39,5 @@ public class DiscountDB {
      * @return boolean True if discount were updated,
      * false otherwise.
      */
-	public boolean updateDiscount(Discount discount);
+	public boolean updateDiscount(Discount discount) {}
 }

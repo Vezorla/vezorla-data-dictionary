@@ -31,4 +31,13 @@ public class CartDB {
      * @return total cost of the cart
      */
     public Currency getTotalCost() {}
+    
+    /**
+     * Apply discount to the cart
+     * 
+     * @param discount Discount to be added
+     * @return boolean True if Discount was applied,
+     * false otherwise.
+     * */
+    public boolean applyDiscount(Discount discount) {}
 }
